@@ -29,19 +29,15 @@ num_joints = model.nu  # 获取关节数量
 target_positions = data.qpos[:num_joints].copy()
 # Kp = 10  # P 控制增益
 
-# for i in range(model.njnt):
-#     joint_name = model.joint(i).name
-#     qpos_addr = model.jnt_qposadr[i]
-#     qvel_addr = model.jnt_dofadr[i]
-#     print(f"Joint {i}: {joint_name}")
-#     print(f"  qpos index: {qpos_addr}")
-#     print(f"  qvel index: {qvel_addr}")
 
-Kp = [0] * 43
-Kd = [0] * 43
+
+Kp = [10] * 43
+Kd = [1] * 43
 Qdes = [0] * 43
 DQdes = [0] * 43
 tau = [0] * 43
+
+Qdes = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.09432,1.676,-0.10472,-0.654375,-0.03944,-0.9684,0.50034,0,0.453614,0,-0.54985,-1.17788,-0.573415,-1.19533,-0.32468,-1.5416,0.47124,-1.047,-0.0986,-0.37122,-0.5649,-0.07329,-0.568749,0,0.61269,0.968475,0.64411,0.9772]
 
 # left_hip_pitch_joint
 Kp[0] = 50
@@ -59,10 +55,15 @@ Kp[14] = 250
 Kp[18] = 50
 # left_wrist_pitch_joint
 Kp[20] = 50
+
+Kp[22:29] = [0.01] * 7
+
 # right_elbow_joint
 Kp[32] = 50
 # right_wrist_pitch_joint
 Kp[34] = 50
+
+Kp[36:43] = [0.01] * 7
 
 # left_hip_pitch_joint
 Kd[0] = 10
@@ -72,18 +73,44 @@ Kd[6] = 10
 Kd[7] = 10
 Kd[3] = 10
 Kd[9] = 10
+
+# ankle
+Kd[10] = 0
+Kd[11] = 0
+
 Kd[12] = 10
 Kd[13] = 10
 # waist_pitch_joint
 Kd[14] = 10
+
+# ankle
+Kd[16] = 0
+Kd[17] = 0
+
 # left_elbow_joint
 Kd[18] = 10
 # left_wrist_pitch_joint
-Kp[20] = 10
+Kd[20] = 10
+
+Kd[21:28] = [0] * 7
+
 # right_elbow_joint
 Kd[32] = 10
 # right_wrist_pitch_joint
-Kp[34] = 10
+Kd[34] = 10
+
+Kd[35:42] = [0] * 7
+
+# data.qpos = [0,0,0.793,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.09432,1.676,-0.10472,-0.654375,-0.03944,-0.9684,0.50034,0,0.453614,0,-0.54985,-1.17788,-0.573415,-1.19533,-0.32468,-1.5416,0.47124,-1.047,-0.0986,-0.37122,-0.5649,-0.07329,-0.568749,0,0.61269,0.968475,0.64411,0.9772]
+
+# for i in range(1, model.njnt):
+#     joint_name = model.joint(i).name
+#     qpos_addr = model.jnt_qposadr[i]
+#     qvel_addr = model.jnt_dofadr[i]
+#     print(f"Joint {i}: {joint_name}")
+#     print(f"  qpos index: {qpos_addr}")
+#     print(f"  qvel index: {qvel_addr}")
+#     print(f"  qpos value: {Qdes[i - 1]}")
 
 while viewer.is_running():
     if not paused:
@@ -91,7 +118,7 @@ while viewer.is_running():
         # data.ctrl[0] = Kp * (0 - data.qpos[7])
         # data.ctrl[6] = Kp * (0 - data.qpos[13])
         # data.ctrl *= 0.1
-
+        # data.qpos = [0,0,0.793,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0.09432,1.676,-0.10472,-0.654375,-0.03944,-0.9684,0.50034,0,0.453614,0,-0.54985,-1.17788,-0.573415,-1.19533,-0.32468,-1.5416,0.47124,-1.047,-0.0986,-0.37122,-0.5649,-0.07329,-0.568749,0,0.61269,0.968475,0.64411,0.9772]
         data.ctrl = np.array(tau) + np.array(Kp) * (np.array(Qdes) - np.array(data.qpos[7:])) + np.array(Kd) * (np.array(DQdes) - np.array(data.qvel[6:]))
 
         # data.ctrl = target_positions
