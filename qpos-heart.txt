@@ -2,174 +2,217 @@
 <key qpos='0 0 0.793 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.09432 1.676 -0.10472 -0.654375 -0.03944 -0.9684 0.50034 0 0.453614 0 -0.54985 -1.17788 -0.573415 -1.19533 -0.32468 -1.5416 0.47124 -1.047 -0.0986 -0.37122 -0.5649 -0.07329 -0.568749 0 0.61269 0.968475 0.64411 0.9772'/>
 <key qpos='0 0 0.793 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.09432 1.676 -0.10472 -0.654375 -0.03944 -0.9684 0.50034 0 0.453614 0 -0.54985 -1.17788 -0.573415 -1.19533 -0.32468 -1.5416 0.47124 -1.047 -0.0986 -0.37122 -0.5649 -0.07329 -0.568749 0 0.61269 0.968475 0.64411 0.9772'/>
 Joint 1: left_hip_pitch_joint
+  0
   qpos index: 7
   qvel index: 6
   qpos value: 0
 Joint 2: left_hip_roll_joint
+  1
   qpos index: 8
   qvel index: 7
   qpos value: 0
 Joint 3: left_hip_yaw_joint
+  2
   qpos index: 9
   qvel index: 8
   qpos value: 0
 Joint 4: left_knee_joint
+  3
   qpos index: 10
   qvel index: 9
   qpos value: 0
 Joint 5: left_ankle_pitch_joint
+  4
   qpos index: 11
   qvel index: 10
   qpos value: 0
 Joint 6: left_ankle_roll_joint
+  5
   qpos index: 12
   qvel index: 11
   qpos value: 0
 Joint 7: right_hip_pitch_joint
+  6
   qpos index: 13
   qvel index: 12
   qpos value: 0
 Joint 8: right_hip_roll_joint
+  7
   qpos index: 14
   qvel index: 13
   qpos value: 0
 Joint 9: right_hip_yaw_joint
+  8
   qpos index: 15
   qvel index: 14
   qpos value: 0
 Joint 10: right_knee_joint
+  9
   qpos index: 16
   qvel index: 15
   qpos value: 0
 Joint 11: right_ankle_pitch_joint
+  10
   qpos index: 17
   qvel index: 16
   qpos value: 0
 Joint 12: right_ankle_roll_joint
+  11
   qpos index: 18
   qvel index: 17
   qpos value: 0
 Joint 13: waist_yaw_joint
+  12
   qpos index: 19
   qvel index: 18
   qpos value: 0
 Joint 14: waist_roll_joint
+  13
   qpos index: 20
   qvel index: 19
   qpos value: 0
 Joint 15: waist_pitch_joint
+  14
   qpos index: 21
   qvel index: 20
   qpos value: 0
 Joint 16: left_shoulder_pitch_joint
+  15
   qpos index: 22
   qvel index: 21
   qpos value: -0.09432
 Joint 17: left_shoulder_roll_joint
+  16
   qpos index: 23
   qvel index: 22
   qpos value: 1.676
 Joint 18: left_shoulder_yaw_joint
+  17
   qpos index: 24
   qvel index: 23
   qpos value: -0.10472
 Joint 19: left_elbow_joint
+  18
   qpos index: 25
   qvel index: 24
   qpos value: -0.654375
 Joint 20: left_wrist_roll_joint
+  19
   qpos index: 26
   qvel index: 25
   qpos value: -0.03944
 Joint 21: left_wrist_pitch_joint
+  20
   qpos index: 27
   qvel index: 26
   qpos value: -0.9684
 Joint 22: left_wrist_yaw_joint
+  21
   qpos index: 28
   qvel index: 27
   qpos value: 0.50034
 Joint 23: left_hand_thumb_0_joint
+  26
   qpos index: 29
   qvel index: 28
   qpos value: 0
 Joint 24: left_hand_thumb_1_joint
+  27
   qpos index: 30
   qvel index: 29
   qpos value: 0.453614
 Joint 25: left_hand_thumb_2_joint
+  28
   qpos index: 31
   qvel index: 30
   qpos value: 0
 Joint 26: left_hand_middle_0_joint
+  24
   qpos index: 32
   qvel index: 31
   qpos value: -0.54985
 Joint 27: left_hand_middle_1_joint
+  25
   qpos index: 33
   qvel index: 32
   qpos value: -1.17788
 Joint 28: left_hand_index_0_joint
+  22
   qpos index: 34
   qvel index: 33
   qpos value: -0.573415
 Joint 29: left_hand_index_1_joint
+  23
   qpos index: 35
   qvel index: 34
   qpos value: -1.19533
 Joint 30: right_shoulder_pitch_joint
+  29
   qpos index: 36
   qvel index: 35
   qpos value: -0.32468
 Joint 31: right_shoulder_roll_joint
+  30
   qpos index: 37
   qvel index: 36
   qpos value: -1.5416
 Joint 32: right_shoulder_yaw_joint
+  31
   qpos index: 38
   qvel index: 37
   qpos value: 0.47124
 Joint 33: right_elbow_joint
+  32
   qpos index: 39
   qvel index: 38
   qpos value: -1.047
 Joint 34: right_wrist_roll_joint
+  33
   qpos index: 40
   qvel index: 39
   qpos value: -0.0986
 Joint 35: right_wrist_pitch_joint
+  34
   qpos index: 41
   qvel index: 40
   qpos value: -0.37122
 Joint 36: right_wrist_yaw_joint
+  35
   qpos index: 42
   qvel index: 41
   qpos value: -0.5649
 Joint 37: right_hand_thumb_0_joint
+  40
   qpos index: 43
   qvel index: 42
   qpos value: -0.07329
 Joint 38: right_hand_thumb_1_joint
+  41
   qpos index: 44
   qvel index: 43
   qpos value: -0.568749
 Joint 39: right_hand_thumb_2_joint
+  42
   qpos index: 45
   qvel index: 44
   qpos value: 0
 Joint 40: right_hand_middle_0_joint
+  38
   qpos index: 46
   qvel index: 45
   qpos value: 0.61269
 Joint 41: right_hand_middle_1_joint
+  39
   qpos index: 47
   qvel index: 46
   qpos value: 0.968475
 Joint 42: right_hand_index_0_joint
+  36
   qpos index: 48
   qvel index: 47
   qpos value: 0.64411
 Joint 43: right_hand_index_1_joint
+  37
   qpos index: 49
   qvel index: 48
   qpos value: 0.9772
