@@ -212,7 +212,7 @@ while viewer.is_running():
         # Qdes[14] = - pitch * 0.02 - data.qvel[4] * 0.04
         # Qdes[3] = Qdes[9] = 0.72 + pitch * 0.035
         # Qdes[0] = Qdes[6] = -0.2 - (data.qpos[11] + 0.2) * 0.1 + Qdes[14] * 0.1 + pitch * 0.01
-        Qdes[3] = Qdes[9] = 0.7 + pitch * 0.055
+        Qdes[3] = Qdes[9] = 0.7 + pitch * 0.055 + (data.qpos[11] + data.qpos[17] + 0.4) / 2 * -0.15
         # Qdes[3] = Qdes[9] = 0.72
         # Qdes[4] = Qdes[10] = 0
         # Qdes[14] -= data.qvel[4] * 0.003
